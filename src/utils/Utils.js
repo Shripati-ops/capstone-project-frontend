@@ -34,10 +34,13 @@ export function getTimeOfTheDay() {
   const currentHour = currentTime.getHours();
 
   if (currentHour >= 5 && currentHour < 12) {
+    localStorage.setItem("theme", "light");
     return "morning";
   } else if (currentHour >= 12 && currentHour < 16) {
+    localStorage.setItem("theme", "light");
     return "afternoon";
   } else {
+    localStorage.setItem("theme", "dark");
     return "evening";
   }
 }

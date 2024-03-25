@@ -22,8 +22,7 @@ const SignUpPage = () => {
     e.preventDefault();
     // Here you can add your form submission logic
     try {
-      console.log("Form Submitted:", formData);
-      const result = await axiosWrapper("POST", formData, "auth/register");
+      const result = await axiosWrapper("POST", formData, "users/signup");
       if (result.status == 200) {
         toast("Registered User Successfully");
         navigate("/signin");

@@ -17,15 +17,12 @@ const SignInPage = () => {
   const handleSubmit = async (e) => {
     try {
       e.preventDefault();
-      const result = await axiosWrapper("POST", formData, "auth/login");
-      if (result.status == 200) {
+      const result = await axiosWrapper("POST", formData, "users/login");
+      if (result.data.status == 200) {
         toast("logged-in User Successfully");
-        localStorage.setItem("access_token", result.data.accessToken);
-        localStorage.setItem("refresh_token", result.data.refreshToken);
-        localStorage.setItem(
-          "menu_access",
-          JSON.stringify(result.data.menuAccess)
-        );
+        localStorage.setItem("access_token", result.data.data.accessToken);
+        localStorage.setItem("refresh_token", result.data.data.refreshToken);
+
         navigate("/");
       }
     } catch (err) {

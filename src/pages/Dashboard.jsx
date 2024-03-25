@@ -37,10 +37,11 @@ function Dashboard() {
 
         if (accessToken) {
           const data = jwtDecode(accessToken);
-          const name = data.user.firstName + " " + data.user.lastName;
-          const email = data.user.email;
-          const avatar = data.user.avatar;
-          const role = data.user.role;
+          console.log(data);
+          const name = data.userData.firstName + " " + data.userData.lastName;
+          const email = data.userData.email;
+          const avatar = data.userData.avatar;
+          const role = data.userData.role;
 
           // Update state variables
           setName(name);
