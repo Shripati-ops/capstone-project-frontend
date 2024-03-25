@@ -10,7 +10,7 @@ export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(persistedTheme || "light");
 
   const changeCurrentTheme = (newTheme) => {
-    setTheme(newTheme);
+    setTheme(newTheme); 
     localStorage.setItem("theme", newTheme);
   };
 
