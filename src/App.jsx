@@ -16,7 +16,7 @@ import DashboardHome from "./pages/DashboardIndex";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { ProtectedRoute } from "./utils/ProtectedRoutes";
-import CreateCampaignPage from "./pages/campaigns/createCampaigns";
+import CreateCampaignPage from "./pages/campaigns/createCampaigns.jsx";
 function App() {
   const location = useLocation();
   const [userData, setUserData] = useState();
@@ -25,7 +25,7 @@ function App() {
     document.querySelector("html").style.scrollBehavior = "auto";
     window.scroll({ top: 0 });
     document.querySelector("html").style.scrollBehavior = "";
-  }, [location.pathname]); // triggered on route change
+  }, [location.pathname]);
   const { name, setName, email, setEmail, avatar, setAvatar, role, setRole } =
     useUserContext();
   useEffect(() => {
