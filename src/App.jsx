@@ -11,7 +11,7 @@ import SignUpPage from "./pages/Signup";
 import SignInPage from "./pages/Signin";
 import { UserContextProvider, useUserContext } from "./context/userContext";
 import AdminSignUpPage from "./pages/admin/AdminSignup";
-import CampaignPage from "./pages/campaigns";
+import CampaignPage from "./pages/Campaigns";
 import DashboardHome from "./pages/DashboardIndex";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
