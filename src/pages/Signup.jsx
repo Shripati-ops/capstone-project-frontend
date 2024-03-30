@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { axiosWrapper } from "../utils/axiosWrapper";
 import { ToastContainer, toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -136,6 +136,15 @@ const SignUpPage = () => {
               >
                 Sign up
               </button>
+            </div>
+            <div className="flex justify-center">
+              Already hava an account?
+              <Link
+                to={"/signin"}
+                className="font-medium text-indigo-600 hover:text-indigo-500 px-1"
+              >
+                Signin
+              </Link>
             </div>
           </form>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { axiosWrapper } from "../utils/axiosWrapper";
 import { ToastContainer, toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const SignInPage = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -64,7 +64,6 @@ const SignInPage = () => {
                 />
               </div>
             </div>
-
             <div>
               <label
                 htmlFor="password"
@@ -85,7 +84,6 @@ const SignInPage = () => {
                 />
               </div>
             </div>
-
             <div className="flex items-center justify-between">
               <div className="flex items-center">
                 <input
@@ -111,7 +109,6 @@ const SignInPage = () => {
                 </a>
               </div>
             </div>
-
             <div>
               <button
                 type="submit"
@@ -119,6 +116,15 @@ const SignInPage = () => {
               >
                 Sign in
               </button>
+            </div>
+            <div className="flex justify-center">
+              New to the platform?
+              <Link
+                to={"/signup"}
+                className="font-medium text-indigo-600 hover:text-indigo-500 px-1"
+              >
+                Signup
+              </Link>
             </div>
           </form>
         </div>

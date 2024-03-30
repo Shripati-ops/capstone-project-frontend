@@ -12,6 +12,9 @@ const userContext = createContext({
 
   role: null,
   setRole: (d: any) => d,
+
+  _id: null,
+  setId: (d: any) => d,
 });
 
 export const UserContextProvider = ({ children }) => {
@@ -19,6 +22,7 @@ export const UserContextProvider = ({ children }) => {
   const [email, setEmail] = useState(null);
   const [avatar, setAvatar] = useState(null);
   const [role, setRole] = useState(null);
+  const [_id, setId] = useState(null);
 
   const contextValues = {
     name,
@@ -29,6 +33,8 @@ export const UserContextProvider = ({ children }) => {
     setAvatar,
     role,
     setRole,
+    _id,
+    setId,
   };
   return (
     <userContext.Provider value={contextValues}>
