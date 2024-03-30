@@ -16,7 +16,7 @@ import DashboardHome from "./pages/DashboardIndex";
 import { useState } from "react";
 import { jwtDecode } from "jwt-decode";
 import { ProtectedRoute } from "./utils/ProtectedRoutes";
-import CreateCampaignPage from "./pages/campaigns/createCampaigns.jsx";
+import CreateCampaignPage from "./pages/Campaigns/CreateCampaigns";
 function App() {
   const location = useLocation();
   const [userData, setUserData] = useState();
