@@ -26,4 +26,14 @@
 - **Owner:**
   - Specifies the owner or creator of the campaign.
 - **Start Date and End Date:**
+
   - Users can define the duration of the campaign with start and end dates.
+
+  ## 5. Configuration
+
+  - **Clone the Repository**
+    - use **git clone <repository-url>** to clone the repository.
+  - **Install the dependencies**
+    - use **npm install** to install all the dependencies
+  - **.env:**
+    - Configure the base_url using VITE_BASE_URL variable to make the project work.
