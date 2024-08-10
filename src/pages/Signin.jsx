@@ -27,7 +27,7 @@ const SignInPage = () => {
       }
     } catch (err) {
       console.log(err);
-      if (err.response.status == 400) {
+      if (err.response.status == 400 || err.response.status == 401) {
         toast("Invalid User credentialss");
       }
     }
